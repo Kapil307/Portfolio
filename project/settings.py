@@ -129,5 +129,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where collectstatic will collect stati
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
-STATICFILES_DIRS = os.path.json(BASE_DIR,'static'),
-STATIC_ROOT = os.path.json(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
