@@ -1,27 +1,15 @@
 {
-    "version": 2,
-"builds": [
+  "version": 2,
+  "builds": [
     {
-        "src": "poll/wsgi.py",
-        "use":"@vercel/python",
-        "config": { "maxlambdaSize": "15mb", "runtime": "python3.9" }
-    },
-    {
-        "src":"build_file.sh",
-        "use":"@vercel/static-build",
-        "confrig": {
-            "distDir": "staticfiles build"
-        }
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
-],
-"routes": [
+  ],
+  "routes": [
     {
-        "src":"/static/(.*)",
-        "dest":"/static/$1"
-    },
-    {
-        "src": "/(.*)",
-        "dest": "poll/wsgi.py"
+      "src": "/(.*)",
+      "dest": "api/index.py"
     }
-]
+  ]
 }
