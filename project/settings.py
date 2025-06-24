@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-5sbvw$n7$k01zm@(z%^=-a*=n$=f8$q8&+hauql6xh97wxr4#=
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  False
-ALLOWED_HOSTS = ['kapil-portfolio-sac9.onrender.com']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 
@@ -127,3 +127,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where collectstatic will collect stati
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+STATICFILES_DIRS = os.path.json(BASE_DIR,'static'),
+STATIC_ROOT = os.path.json(BASE_DIR, 'staticfiles_build', 'static')
