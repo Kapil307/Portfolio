@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-5sbvw$n7$k01zm@(z%^=-a*=n$=f8$q8&+hauql6xh97wxr4#=
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  False
-ALLOWED_HOSTS = ['kapil-project.onrender.com']
+ALLOWED_HOSTS = ['kapil-portfolio-sac9.onrender.com']
 
 
 
